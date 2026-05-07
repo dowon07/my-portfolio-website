@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-monorepo",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace frontend",
+    "prestart": "npm run build --workspace frontend",
+    "start": "node backend/server.js"
+  }
+}
